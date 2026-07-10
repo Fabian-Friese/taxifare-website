@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import requests
 '''
-# TaxiFareModel front
+# Taxi Fare Predictor Fabian Friese
 '''
 
 
@@ -34,5 +34,6 @@ if st.button('Predict fare'):
     response = requests.get(url, params=params)
     prediction = response.json()
     fare = prediction['fare']
+    st.balloons()
 
     st.header(f'💰 Predicted fare: ${fare:.2f}')
